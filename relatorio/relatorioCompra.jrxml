@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa18e60f-a23c-45c1-9215-476721204cd7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="funcionario" class="java.lang.String"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="veiculo" class="java.lang.String"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="182" height="35" uuid="d23da29a-4469-4753-8293-fcf1a05f310a"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="0" width="232" height="35" uuid="94cbaba8-2b93-4cd2-bf9d-42f7488864a6"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[WPM - Car Shop]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="433" y="0" width="80" height="20" uuid="26cb7317-eb27-4693-8717-b8d5307f2c5c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="513" y="0" width="40" height="20" uuid="5b82bb8b-5512-4b91-ba0a-c84a07bad85a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="116" height="20" uuid="ed965e27-ce72-4261-9e4b-785793a7fd41"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="123" height="20" uuid="d06d28a0-121f-451d-9e7a-3ca83e3c8bf9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="116" height="20" uuid="e1613dcd-91ee-4274-9b71-4e2be84f7324"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Veículo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="100" height="20" uuid="b1ad19fc-d40c-4434-8959-1cba57d436d7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="5dd93ee6-887a-43c2-98f3-f177cc5177aa"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="116" height="20" uuid="2846943f-2f90-465d-bf1c-fbee9e1400eb"/>
+				<textFieldExpression><![CDATA[$F{funcionario}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="04d21c20-671c-48d1-9087-cdf769297f5c"/>
+			</line>
+			<textField>
+				<reportElement x="116" y="1" width="123" height="20" uuid="6365f414-2fab-4431-906c-98433ae52887"/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="1" width="116" height="20" uuid="8366aab2-fbd1-4775-b199-3c64c3cfd8df"/>
+				<textFieldExpression><![CDATA[$F{veiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="1" width="100" height="20" uuid="8b7a832b-c30d-4399-85b4-e25f7c71d567"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="1" width="100" height="20" uuid="64b27794-9e90-4adc-a759-b7de472f0cc6"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="116" height="20" uuid="996ecdb3-31dd-4c26-8a3e-21ce11c36a0d"/>
+				<text><![CDATA[Relatório Gerado em:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="116" y="0" width="100" height="20" uuid="c8975f50-1d81-41c0-a7e4-c0aeb1549d19"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
